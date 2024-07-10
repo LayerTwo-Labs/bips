@@ -208,10 +208,9 @@ M2 is a coinbase OP Return output containing the following:
 
 M2 is ignored if it doesn't parse, or if it is for a sidechain that doesn't exist.
 
-M2 is invalid if:
+An M2 is invalid if:
 
-* An M2 is already in this block.
-* It tries to ACK two different M1s for the same slot.
+* Another M2 exists within the same coinbase, at a lower output index, which was not ignored or invalid.
 
 Otherwise: 
 
